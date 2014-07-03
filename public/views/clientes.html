@@ -1,0 +1,26 @@
+<div><h1>Clientes</h1><br><br>
+			
+	<input ng-model="search">
+
+    <table class="table table-bordered clientes">
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Nombre Cliente</th>
+          <th>RFC</th>
+          <th>Dirección</th>
+          <th>Ciudad</th>
+          <th>Telefono</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr ng-repeat="cliente in clientes | filter:search">
+          <td>{{cliente.Cliente}}</td>
+          <td>{{cliente.Nombre}}</td>
+          <td>{{cliente.RFC}}</td>
+          <td>{{cliente.Direccion}}</td>
+          <td>{{cliente.Ciudad}}</td>
+          <td>{{cliente.Telefono}}</td>
+        </tr>
+      </tbody>
+    </table></div>
